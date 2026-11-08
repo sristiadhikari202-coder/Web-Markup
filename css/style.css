@@ -1,0 +1,931 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Colour palette is based on the supplied Purmerend Figma design. */
+/* The layouts use basic CSS, Flexbox, Grid and one mobile media query. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #E2F0E8;
+    color: #17352D;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    word-spacing: 1px;
+}
+
+a {
+    color: #0B4938;
+}
+
+a:hover {
+    color: #27845D;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #FFFFFF;
+    background-color: #0B4938;
+}
+
+button, input, textarea {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Header and navigation */
+.site-header {
+    background-color: #FFFFFF;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 9px 30px;
+    min-height: 80px;
+}
+
+.site-logo {
+    flex-shrink: 0;
+}
+
+.site-logo img {
+    width: 95px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form label {
+    position: absolute;
+    left: -10000px;
+}
+
+.search-form .search-input {
+    width: 175px;
+    background-color: #E2F0E8;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #176B4D;
+    border-radius: 14px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+}
+
+.search-form .search-submit {
+    position: absolute;
+    left: -10000px;
+}
+
+.site-navigation {
+    flex: 1;
+}
+
+.site-navigation ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.site-navigation a {
+    display: block;
+    color: #17352D;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.site-navigation a:hover,
+.site-navigation a.current-page {
+    color: #176B4D;
+    text-decoration: underline;
+}
+
+.site-navigation .contact-nav {
+    background-color: #E2E8E3;
+    border-radius: 7px;
+}
+
+.menu-button {
+    display: none;
+}
+
+/* Common buttons and links */
+.button, .sport-picker summary {
+    display: inline-block;
+    background-color: #176B4D;
+    color: #FFFFFF;
+    border-radius: 7px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #176B4D;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 9px 20px;
+    cursor: pointer;
+}
+
+.button:hover,
+.sport-picker summary:hover {
+    background-color: #0B4938;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.back-link {
+    display: inline-block;
+    background-color: #FFFFFF;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+/* Homepage photo and text */
+.home-hero {
+    background-image: url('../img/football-field.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 470px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-message {
+    width: 740px;
+    max-width: 100%;
+    background-color: rgba(10, 25, 16, 0.53);
+    border-radius: 15px;
+    color: #FFFFFF;
+    padding: 25px 45px;
+}
+
+.hero-message h1 {
+    color: #FFFFFF;
+    font-size: 2.45rem;
+    margin: 0 0 20px;
+}
+
+.hero-message h1 strong {
+    color: #65A44D;
+}
+
+.hero-message p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    max-width: 650px;
+    margin-bottom: 0;
+}
+
+/* Three homepage actions */
+.home-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'explore report find';
+    gap: 25px;
+    max-width: 1040px;
+    padding: 35px 15px;
+    margin: auto;
+}
+
+.feature-explore { grid-area: explore; }
+.feature-report { grid-area: report; }
+.feature-find { grid-area: find; }
+.feature-card {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7AA38E;
+    border-radius: 9px;
+    padding: 22px 20px;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-card h2 {
+    font-size: 1rem;
+    color: #17352D;
+    margin-top: 0;
+}
+
+.feature-card p {
+    text-align: left;
+    font-size: 0.8rem;
+    max-width: 220px;
+}
+
+.feature-card .button,
+.feature-card .sport-picker {
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.sport-picker {
+    position: relative;
+}
+
+.sport-picker summary {
+    list-style-type: none;
+    display: block;
+    width: 100%;
+}
+
+.sport-picker summary::-webkit-details-marker {
+    display: none;
+}
+
+.sport-picker ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    padding: 7px;
+    margin: 0;
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #C5DFD0;
+    z-index: 10;
+}
+
+.sport-picker li a {
+    display: block;
+    padding: 5px;
+}
+
+/* Homepage map and park cards */
+.map-overview {
+    max-width: 1050px;
+    margin: auto;
+    padding: 30px 15px 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.map-overview figure,
+.sport-banner,
+.sport-more figure,
+.sport-stories figure {
+    margin: 0;
+}
+
+.map-overview img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+figcaption {
+    color: #4B6F60;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+.map-text h2 {
+    color: #17352D;
+    margin-bottom: 8px;
+}
+
+.map-text p {
+    margin-top: 0;
+}
+
+.parks-section {
+    padding: 45px 25px 65px;
+    background-color: #F4F8F5;
+    text-align: center;
+}
+
+.parks-section > h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.park-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 25px auto 0;
+}
+
+.park-cards article {
+    background-color: #FFFFFF;
+    border: 1px solid #C5DFD0;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 18px;
+}
+
+.park-cards img {
+    width: 100%;
+    height: 145px;
+    object-fit: cover;
+}
+
+.park-cards h3,
+.park-cards p {
+    margin: 8px 14px;
+}
+
+.park-cards h3 {
+    font-size: 1rem;
+}
+
+.park-cards a {
+    font-weight: 600;
+}
+
+/* Sport detail page */
+.sport-banner img {
+    display: block;
+    width: 100%;
+    height: 365px;
+    object-fit: cover;
+    object-position: center 82%;
+}
+
+.sport-banner figcaption {
+    position: absolute;
+    left: -10000px;
+}
+
+.sport-content {
+    max-width: 1150px;
+    margin: auto;
+    padding: 20px 25px 55px;
+}
+
+.sport-columns {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 50px;
+}
+
+.sport-intro h1 {
+    margin: 0 0 5px;
+}
+
+.sport-intro > p {
+    margin-top: 4px;
+}
+
+.sport-description {
+    text-indent: 1em;
+}
+
+.sport-description::first-letter {
+    font-weight: 700;
+    color: #176B4D;
+}
+
+.facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 480px;
+    margin: 25px 0;
+}
+
+.facts article {
+    background-color: #F4F8F5;
+    border-radius: 8px;
+    padding: 14px 12px;
+    text-align: center;
+}
+
+.facts h2 {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.facts p {
+    font-size: 0.8rem;
+    color: #4D7564;
+    margin: 5px 0 0;
+}
+
+.sport-more {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #176B4D;
+    padding: 16px;
+    background-color: #E2F0E8;
+}
+
+.sport-more img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+
+.sport-more h2 {
+    border-top: 1px solid #7AA38E;
+    font-size: 1rem;
+    padding-top: 12px;
+}
+
+.facility-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+    text-align: left;
+}
+
+.facility-table caption {
+    font-size: 0.7rem;
+    text-align: left;
+    color: #4B6F60;
+}
+
+.facility-table th,
+.facility-table td {
+    padding: 8px;
+    border-bottom: 1px solid #C5DFD0;
+}
+
+.facility-table tbody tr:nth-child(even) {
+    background-color: #CFF;
+}
+
+.facility-table tbody tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+.sport-stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 23px;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.sport-stories img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.story-card {
+    background-color: #F2C14E;
+    border-radius: 30px;
+    padding: 25px 30px;
+    min-height: 215px;
+}
+
+.story-card h2 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.story-card p {
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.visit-tips {
+    background-color: #F4F8F5;
+    border-radius: 15px;
+    padding: 20px 30px;
+}
+
+.visit-tips h2 {
+    font-size: 1rem;
+}
+
+.visit-tips li {
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.other-sports {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.other-sports h2 {
+    font-size: 1.1rem;
+}
+
+.other-sports ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Contact page */
+.contact-hero {
+    background-image: url('../img/football-field.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 70px 25px;
+}
+
+.contact-hero header {
+    background-color: rgba(10, 25, 16, 0.6);
+    color: #FFFFFF;
+    max-width: 790px;
+    padding: 22px 30px;
+    margin: auto;
+    border-radius: 12px;
+}
+
+.contact-hero h1 {
+    margin: 0;
+}
+
+.contact-area {
+    padding: 20px 40px 55px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    padding: 30px 15px;
+}
+
+.contact-details {
+    background-color: #F4F8F5;
+    padding: 20px;
+    border-radius: 9px;
+    align-self: start;
+}
+
+.contact-details h2 {
+    color: #176B4D;
+}
+
+.contact-details p {
+    background-color: #E2F0E8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-details a {
+    overflow-wrap: anywhere;
+}
+
+.contact-form {
+    background-color: #FFFFFF;
+    padding: 16px;
+}
+
+.contact-form fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-form legend {
+    font-weight: 700;
+    color: #17352D;
+    margin-bottom: 10px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.contact-form .form-field,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #7AA38E;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    background-color: #F4F8F5;
+}
+
+.contact-form .button {
+    display: block;
+    width: 65%;
+    margin: 18px auto 0;
+}
+
+.form-explanation {
+    font-size: 0.75rem;
+    color: #4B6F60;
+}
+
+.contact-thanks {
+    text-align: right;
+    color: #4D7564;
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+/* Footer: floating logo provides a meaningful use of float. */
+.site-footer {
+    background-color: #215B46;
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 25px;
+    padding: 30px 45px;
+}
+
+.site-footer h2 {
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+.footer-brand h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-brand img {
+    float: left;
+    width: 150px;
+    margin: 0 15px 8px 0;
+}
+
+.footer-brand p {
+    font-size: 0.75rem;
+}
+
+.site-footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.site-footer li {
+    margin-bottom: 9px;
+}
+
+.site-footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.site-footer em {
+    font-size: 0.85rem;
+}
+
+/* Visible cookies message required by the school assessment. */
+.cookie-notice {
+    position: fixed;
+    left: 12px;
+    bottom: 10px;
+    z-index: 9999;
+    background-color: #FFFFFF;
+    color: #0B4938;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #C5DFD0;
+    border-radius: 5px;
+    padding: 5px 11px;
+    max-width: 300px;
+    font-size: 0.65rem;
+}
+
+.cookie-notice p {
+    margin: 0;
+}
+
+/* PC layout: widths greater than 768px. */
+@media screen and (min-width: 769px) {
+    .menu-button {
+        display: none;
+    }
+
+    .site-navigation {
+        display: block;
+    }
+}
+
+/* Smartphone layout: 768px or less. PC layout is above 768px. */
+@media screen and (max-width: 768px) {
+    .site-header {
+        min-height: 65px;
+        background-color: #A8D6B1;
+        justify-content: space-between;
+        padding: 7px 18px;
+    }
+
+    .site-logo img {
+        width: 100px;
+    }
+
+    .search-form {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        background-color: #A8D6B1;
+        color: #17352D;
+        border: 1px solid #176B4D;
+        padding: 7px 10px;
+        cursor: pointer;
+    }
+
+    .site-navigation {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 220px;
+        background-color: #E2F0E8;
+        border: 1px solid #176B4D;
+        z-index: 100;
+    }
+
+    .site-navigation.open {
+        display: block;
+    }
+
+    .site-navigation ul {
+        display: block;
+    }
+
+    .site-navigation li a {
+        display: block;
+        padding: 10px 15px;
+    }
+
+    .home-hero {
+        min-height: 390px;
+        align-items: center;
+        padding: 0;
+        background-position: center;
+    }
+
+    .hero-message {
+        width: 100%;
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .hero-message h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-message p {
+        font-size: 0.95rem;
+        font-weight: 400;
+    }
+
+    .home-features {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'find' 'explore' 'report';
+        max-width: 380px;
+        padding: 50px 24px;
+    }
+
+    .feature-card {
+        min-height: 210px;
+    }
+
+    .feature-card p {
+        text-align: center;
+    }
+
+    .map-overview {
+        grid-template-columns: 1fr;
+        max-width: 390px;
+        gap: 20px;
+        text-align: center;
+        padding: 35px 25px 50px;
+    }
+
+    .park-cards {
+        grid-template-columns: 1fr;
+        max-width: 390px;
+    }
+
+    .sport-banner img {
+        height: 250px;
+    }
+
+    .sport-content {
+        padding: 20px 18px 45px;
+    }
+
+    .sport-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sport-intro h1 {
+        font-size: 1.7rem;
+    }
+
+    .facts {
+        gap: 10px;
+    }
+
+    .sport-stories {
+        grid-template-columns: 1fr;
+    }
+
+    .sport-stories img {
+        height: 230px;
+    }
+
+    .other-sports ul {
+        display: block;
+    }
+
+    .other-sports li {
+        margin: 12px 0;
+    }
+
+    .contact-hero {
+        padding: 45px 15px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .contact-area {
+        padding: 20px;
+    }
+
+    .contact-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .contact-thanks {
+        text-align: center;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 12px;
+        padding: 25px 18px 65px;
+    }
+
+    .footer-brand img {
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .cookie-notice {
+        max-width: 250px;
+        font-size: 0.6rem;
+    }
+}

@@ -1,1 +1,149 @@
-boe!
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Purmerend Sports Parks">
+		<meta name="description" content="Find outdoor football, basketball, fitness and skateboard locations in Purmerend. Explore the parks, view the map or report a problem.">
+		<meta name="keywords" content="Purmerend, sports parks, football, basketball, outdoor fitness">
+		<title>Home | Purmerend Sports Parks</title>
+		<link rel="icon" type="image/png" href="img/parks-purmerend-logo.png">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="navigation.js" defer></script>
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-logo" href="index.html" aria-label="Go to the homepage">
+				<img src="img/parks-purmerend-logo.png" alt="Parks Purmerend green logo" title="Parks Purmerend">
+			</a>
+			<form class="search-form" action="https://www.google.com/search" method="get" role="search">
+				<label for="site-search">Search the web for parks and sports</label>
+				<input class="search-input" id="site-search" type="search" name="q" placeholder="Search parks, sports" required>
+				<input class="search-submit" type="submit" value="Search">
+			</form>
+			<button id="menu-button" class="menu-button" type="button" aria-controls="site-navigation" aria-expanded="false">☰ Menu</button>
+			<nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+				<ul>
+					<li><a class="current-page" href="index.html" aria-current="page">Home</a></li>
+					<li><a href="football.html">Football</a></li>
+					<li><a href="basketball.html">Basketball</a></li>
+					<li><a href="fitness.html">Fitness</a></li>
+					<li><a href="skateboard.html">Skateboard</a></li>
+					<li><a class="contact-nav" href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="home-hero" aria-labelledby="home-title">
+				<header class="hero-message">
+					<h1 id="home-title">Welcome to <strong>Purmerend</strong> Sports Parks</h1>
+					<p>Looking for a free place to play sports, exercise, or enjoy the outdoors? Our website helps you find the right public sports park in Purmerend.</p>
+				</header>
+			</section>
+			<section class="home-features" aria-label="Ways to explore">
+				<article class="feature-card feature-explore">
+					<h2>Explore Parks</h2>
+					<p>View park details and find out what facilities and sports courts are available.</p>
+					<a class="button" href="#parks">Explore Parks →</a>
+				</article>
+				<article class="feature-card feature-report">
+					<h2>Report a problem</h2>
+					<p>Found damaged sports equipment or a broken net? Let us know using our contact form.</p>
+					<a class="button" href="contact.html#report-form">Report a Problem →</a>
+				</article>
+				<article class="feature-card feature-find">
+					<h2>Find a Park</h2>
+					<p>Choose your sport or activity and discover a suitable park near you.</p>
+					<details class="sport-picker">
+						<summary>Find a Park ▼</summary>
+						<ul>
+							<li><a href="football.html">Football</a></li>
+							<li><a href="basketball.html">Basketball</a></li>
+							<li><a href="fitness.html">Fitness</a></li>
+							<li><a href="skateboard.html">Skateboard</a></li>
+						</ul>
+					</details>
+				</article>
+			</section>
+			<section id="park-map" class="map-overview" aria-labelledby="map-title">
+				<figure>
+					<a href="https://www.google.com/maps?q=sports+parks+Purmerend" target="_blank" rel="noopener noreferrer">
+						<img src="img/purmerend-map.jpg" alt="Map of Purmerend and its surrounding parks" title="Discover sports parks around Purmerend">
+					</a>
+					<figcaption>Map showing the Purmerend area.</figcaption>
+				</figure>
+				<article class="map-text">
+					<h2 id="map-title">Discover Purmerend's Parks</h2>
+					<p>Explore public parks and sports locations across Purmerend.</p>
+					<a class="button" href="https://www.google.com/maps?q=sports+parks+Purmerend" target="_blank" rel="noopener noreferrer">View map →</a>
+				</article>
+			</section>
+			<section id="parks" class="parks-section" aria-labelledby="parks-title">
+				<h2 id="parks-title">Explore Parks</h2>
+				<p>Find a park in Purmerend. Choose one of the sports below to see the details.</p>
+				<section class="park-cards" aria-label="Popular sport locations">
+					<article>
+						<img src="img/football-player.jpg" alt="Person playing football on an outdoor field" title="Football at Sportpark De Munnik">
+						<h3>Sportpark De Munnik</h3>
+						<p>Sports: Football</p>
+						<a href="football.html">View park →</a>
+					</article>
+					<article>
+						<img src="img/basketball-court.jpg" alt="Outdoor basketball court" title="Basketball park in Purmerend">
+						<h3>Basketbalveld</h3>
+						<p>Sports: Basketball</p>
+						<a href="basketball.html">View park →</a>
+					</article>
+					<article>
+						<img src="img/fitness-park.jpg" alt="Outdoor fitness equipment in a park" title="Fitness Park De Uitvlugt">
+						<h3>Park De Uitvlugt</h3>
+						<p>Sports: Fitness</p>
+						<a href="fitness.html">View park →</a>
+					</article>
+					<article>
+						<img src="img/skatepark.jpg" alt="Outdoor skate park with ramps" title="Skateboard park in Purmerend">
+						<h3>Leeghwaterpark</h3>
+						<p>Sports: Skateboarding</p>
+						<a href="skateboard.html">View park →</a>
+					</article>
+				</section>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<section class="footer-brand">
+				<h2>Explore Purmerend</h2>
+				<img src="img/park-tracker-logo.jpg" alt="Purmerend Sports Parks Tracker logo" title="Park Tracker logo">
+				<p>Discover parks, sports and outdoor spaces around Purmerend.</p>
+				<p>&copy; 2026 PARK TRACKER</p>
+			</section>
+			<section class="footer-links">
+				<h2>Explore</h2>
+				<ul>
+					<li><a href="index.html#parks">Parks</a></li>
+					<li><a href="football.html">Sports and Facilities</a></li>
+					<li><a href="fitness.html">Activities</a></li>
+				</ul>
+			</section>
+			<section class="footer-links">
+				<h2>Information</h2>
+				<ul>
+					<li><a href="index.html#parks">Parks</a></li>
+					<li><a href="basketball.html">Sports and Facilities</a></li>
+					<li><a href="skateboard.html">Activities</a></li>
+				</ul>
+			</section>
+			<section class="footer-links">
+				<h2>Connect</h2>
+				<ul>
+					<li><a href="contact.html">Contact us</a></li>
+					<li><a href="contact.html#report-form">Report a problem</a></li>
+					<li><a href="index.html#park-map">View map</a></li>
+				</ul>
+				<p><em>Made for outdoor life.</em></p>
+			</section>
+		</footer>
+		<aside class="cookie-notice" aria-label="Cookie notice">
+			<p><strong>Cookies:</strong> This website does not intentionally use tracking cookies.</p>
+		</aside>
+	</body>
+</html>
