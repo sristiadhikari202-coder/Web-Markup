@@ -1,5 +1,5 @@
-Student name:
-Student number:
-Student class:
-GitHub Repository:
-GitHub Pages URL:
+Student name: Sristi Adhikari
+Student number:758766
+Student class: IT B
+GitHub Repository:https://github.com/sristiadhikari202-coder
+GitHub Pages URL:https://sristiadhikari202-coder.github.io/Web-Markup/
