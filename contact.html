@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Purmerend Sports Parks">
+		<meta name="description" content="Contact Purmerend Sports Parks to report a problem at a sports location, ask a question or share information about a public park.">
+		<meta name="keywords" content="Purmerend, contact, sports parks, report a problem, park facilities">
+		<title>Contact | Purmerend Sports Parks</title>
+		<link rel="icon" type="image/png" href="img/parks-purmerend-logo.png">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="navigation.js" defer></script>
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="site-logo" href="index.html" aria-label="Go to the homepage">
+				<img src="img/parks-purmerend-logo.png" alt="Parks Purmerend green logo" title="Parks Purmerend">
+			</a>
+			<form class="search-form" action="https://www.google.com/search" method="get" role="search">
+				<label for="site-search">Search the web for parks and sports</label>
+				<input class="search-input" id="site-search" type="search" name="q" placeholder="Search parks, sports" required>
+				<input class="search-submit" type="submit" value="Search">
+			</form>
+			<button id="menu-button" class="menu-button" type="button" aria-controls="site-navigation" aria-expanded="false">☰ Menu</button>
+			<nav id="site-navigation" class="site-navigation" aria-label="Main navigation">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="football.html">Football</a></li>
+					<li><a href="basketball.html">Basketball</a></li>
+					<li><a href="fitness.html">Fitness</a></li>
+					<li><a href="skateboard.html">Skateboard</a></li>
+					<li><a class="contact-nav current-page" href="contact.html" aria-current="page">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="contact-hero">
+				<header>
+					<h1>Let us fix your problem</h1>
+					<p>Have a question or found a problem? We are here to help! Use the form below or get in touch with us directly.</p>
+				</header>
+			</section>
+			<section class="contact-area">
+				<a class="back-link" href="index.html">← Back to Home</a>
+				<section class="contact-columns" aria-label="Contact information and report form">
+					<aside class="contact-details">
+						<h2>Get in touch with us through</h2>
+						<p><strong>Email:</strong> <a href="mailto:purmerendsportsparktracker@gmail.com">purmerendsportsparktracker@gmail.com</a></p>
+						<p><strong>Location:</strong> Purmerend, Netherlands</p>
+						<p><strong>Contact:</strong> Use the form to describe a problem at a sports park.</p>
+						<p><em>Thank you for helping keep our parks safe and enjoyable.</em></p>
+					</aside>
+					<form id="report-form" class="contact-form" action="https://next-app-router-playground-kohl.vercel.app/api/contact" method="post">
+						<fieldset>
+							<legend>Report a problem or send a message</legend>
+
+							<label for="visitor-name">Name</label>
+							<input class="form-field" id="visitor-name" name="name" type="text" placeholder="Your name" required>
+
+							<label for="visitor-email">Email</label>
+							<input class="form-field" id="visitor-email" name="email" type="email" placeholder="Your email address" required>
+
+							<label for="visitor-message">Your message</label>
+							<textarea id="visitor-message" name="message" rows="5" placeholder="Describe the problem or ask your question" required></textarea>
+
+							<p class="form-explanation">After submitting, the teacher's website displays a confirmation. Please do not include passwords or sensitive information.</p>
+							<input class="button" type="submit" value="Submit">
+						</fieldset>
+					</form>
+				</section>
+				<p class="contact-thanks">Thank you for helping us keep Purmerend parks safe and enjoyable for everyone.</p>
+			</section>
+		</main>
+		<footer class="site-footer">
+			<section class="footer-brand">
+				<h2>Explore Purmerend</h2>
+				<img src="img/park-tracker-logo.jpg" alt="Purmerend Sports Parks Tracker logo" title="Park Tracker logo">
+				<p>Discover parks, sports and outdoor spaces around Purmerend.</p>
+				<p>&copy; 2026 PARK TRACKER</p>
+			</section>
+			<section class="footer-links">
+				<h2>Explore</h2>
+				<ul>
+					<li><a href="index.html#parks">Parks</a></li>
+					<li><a href="football.html">Sports and Facilities</a></li>
+					<li><a href="fitness.html">Activities</a></li>
+				</ul>
+			</section>
+			<section class="footer-links">
+				<h2>Information</h2>
+				<ul>
+					<li><a href="index.html#parks">Parks</a></li>
+					<li><a href="basketball.html">Sports and Facilities</a></li>
+					<li><a href="skateboard.html">Activities</a></li>
+				</ul>
+			</section>
+			<section class="footer-links">
+				<h2>Connect</h2>
+				<ul>
+					<li><a href="contact.html">Contact us</a></li>
+					<li><a href="contact.html#report-form">Report a problem</a></li>
+					<li><a href="index.html#park-map">View map</a></li>
+				</ul>
+				<p><em>Made for outdoor life.</em></p>
+			</section>
+		</footer>
+		<aside class="cookie-notice" aria-label="Cookie notice">
+			<p><strong>Cookies:</strong> This website does not intentionally use tracking cookies.</p>
+		</aside>
+	</body>
+</html>
